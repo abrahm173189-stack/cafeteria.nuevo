@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuadro Marrón: Mitad de arriba */
+.cuadro-marron {
+    width: 100%;
+    height: 50vh;
+    background-color: #8B4513;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* Zona Beige: Mitad de abajo */
+.zona-beige {
+    width: 100%;
+    height: 50vh;
+    background-color: #F5F5DC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.fila-doble {
+    display: flex;
+    gap: 50px; /* Espacio entre los dos botones de abajo */
+}
+
+/* Estilo de los botones */
+.btn {
+    background-color: #e1e1e1;
+    border: 1px solid #767676;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.largo { width: 400px; }
+.corto { width: 180px; }
