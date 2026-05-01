@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Presentación</title>
-    <!-- ESTA LÍNEA ES LA MÁS IMPORTANTE PARA CONECTAR EL CSS -->
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -22,5 +21,39 @@
         </div>
     </div>
 
+    <script>
+        (function() {
+            function crearGlobo(lado, color) {
+                const globo = document.createElement('div');
+                Object.assign(globo.style, {
+                    position: 'fixed',
+                    top: '20px',
+                    width: '50px',
+                    height: '70px',
+                    backgroundColor: color,
+                    borderRadius: '50% 50% 50% 50% / 40% 40% 60% 60%',
+                    zIndex: '10000',
+                    boxShadow: 'inset -5px -5px 10px rgba(0,0,0,0.2)'
+                });
+                globo.style[lado] = '20px';
+
+                const hilo = document.createElement('div');
+                Object.assign(hilo.style, {
+                    position: 'absolute',
+                    bottom: '-30px',
+                    left: '24px',
+                    width: '2px',
+                    height: '40px',
+                    backgroundColor: 'rgba(0,0,0,0.3)'
+                });
+
+                globo.appendChild(hilo);
+                document.body.appendChild(globo);
+            }
+
+            crearGlobo('left', '#FF5E5E');
+            crearGlobo('right', '#5EC2FF');
+        })();
+    </script>
 </body>
 </html>
