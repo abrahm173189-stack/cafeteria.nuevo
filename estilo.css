@@ -5,12 +5,12 @@ body {
     background-repeat: no-repeat;
     background-size: 90% auto; /* Ajusta este % según qué tan ancho quieras el borde */
     background-attachment: fixed;
-    background-color: #f5f5dc; /* El color del centro */
+    background-color: #f1e7ef; /* El color del centro */
 }
 
 /* 2. Centramos tus cuadros para que no pisen las imágenes laterales */
 .cuadro-marron, .zona-beige {
-    max-width: 85%; 
+    max-width: 86%; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -30,9 +30,9 @@ body {
     align-items: center;
     justify-content: center;
     color: black;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-family: 'Pixellet TH', 'Pixelify Sans', cursive;
 }
 
 /* Zona Beige: Mitad de abajo */
@@ -49,19 +49,26 @@ body {
 
 .fila-doble {
     display: flex;
-    gap: 50px; /* Espacio entre los dos botones de abajo */
+    gap: 90px; /* Espacio entre los dos botones de abajo */
 }
 
 /* Estilo de los botones */
 .btn {
-    background-color: #e1e1e1;
-    border: 1px solid #767676;
-    padding: 15px;
-    font-size: 1.1rem;
+    background-color: #5b1a12;
+    border: 1px solid #d69b7c;
+    padding: 25px;
+    font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
+    color: white; /*color de la letra del boton de codigo de rastreo*/
 }
 
 .largo { width: 400px; }
 .corto { width: 180px; }
+
+.btn.especial {
+    background-color: #d69b7c; /* Fondo Beige */
+    color: #5b1a12;           /* Texto Marrón */
+    border: 2px solid#d5885f ; /* Borde para que se vea sobre el fondo beige */
+}
