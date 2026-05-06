@@ -49,7 +49,7 @@ body {
 
 .fila-doble {
     display: flex;
-    gap: 90px; /* Espacio entre los dos botones de abajo */
+    gap: 180px; /* Espacio entre los dos botones de abajo */
 }
 
 /* Estilo de los botones */
