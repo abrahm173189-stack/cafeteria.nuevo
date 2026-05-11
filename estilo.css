@@ -1,77 +1,101 @@
+/* Configuración del fondo de la página */
 body {
-    /* 1. Ponemos la imagen a la izquierda y derecha */
-    background-image: url('cafe3.jep.webp'), url('cafe3.jep.webp');
-    background-position: left center, right center;
-    background-repeat: no-repeat;
-    background-size: 90% auto; /* Ajusta este % según qué tan ancho quieras el borde */
-    background-attachment: fixed;
-    background-color: #f1e7ef; /* El color del centro */
+    position: fixed;   /* Mantiene el fondo quieto aunque haya scroll */
+    top: 0;            /* Alinea al inicio superior */
+    left: 0;           /* Alinea al inicio izquierdo */
+    width: 100%;       /* Ocupa todo el ancho de la pantalla */
+    height: 100%;      /* Ocupa todo el alto de la pantalla */
+    background-image: url('img/Fondo2.png'); /* Imagen de fondo */
+    background-repeat: repeat-y;             /* Repite la imagen solo hacia abajo */
+    background-size: 100% auto;              /* Ancho total, alto automático */
+    background-position: top center;         /* Centra la imagen de fondo */
+    z-index: -1;       /* Envía el fondo detrás de todo el contenido */
 }
 
-/* 2. Centramos tus cuadros para que no pisen las imágenes laterales */
+/* Clase para aplicar la fuente tipo pixel */
+.pixel-font {
+  font-family: "Jersey 10", sans-serif;
+}
+
+/* Contenedores de contenido (Marrón y Beige) */
 .cuadro-marron, .zona-beige {
-    max-width: 86%; 
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 86%;        /* Limita el ancho para que se vea el fondo a los lados */
+    margin-left: auto;     /* Centra el contenedor (margen izquierdo) */
+    margin-right: auto;    /* Centra el contenedor (margen derecho) */
 }
 
+/* Reseteo básico para evitar márgenes extra del navegador */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye bordes y rellenos en el tamaño total */
 }
 
-/* Cuadro Marrón: Mitad de arriba */
+/* Sección superior de color marrón */
 .cuadro-marron {
     width: 100%;
-    height: 50vh;
+    height: 50vh;            /* Ocupa el 50% de la altura de la ventana */
     background-color: #a36c6c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-size: 6vw;
-    font-weight: bold;
-    font-family: 'Pixellet TH', 'Pixelify Sans', cursive;
+    display: flex;           /* Activa el modo caja flexible */
+    align-items: center;     /* Centra el contenido verticalmente */
+    justify-content: space-between; /* Separa los elementos a los extremos */
 }
 
-/* Zona Beige: Mitad de abajo */
+/* Estilo del título principal */
+.cuadro-marron h1{
+    font-size: 6vw;          /* Tamaño de letra basado en el ancho de pantalla */
+    text-align: center;
+}
+
+/* Imágenes dentro del cuadro marrón */
+.cuadro-marron img{
+    width: 15vw;
+    height: auto;
+    margin-left: 5vw;        /* Separación interna izquierda */
+    margin-right: 5vw;       /* Separación interna derecha */
+}
+
+/* Sección inferior de color beige */
 .zona-beige {
     width: 100%;
-    height: 50vh;
+    height: 50vh;            /* Ocupa el otro 50% de la altura */
     background-color: #F5F5DC;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;  /* Apila los elementos verticalmente */
+    align-items: center;     /* Centra los elementos horizontalmente */
+    justify-content: space-evenly; /* Distribuye espacio igual entre filas */
+    gap: 15px;               /* Espacio mínimo entre elementos */
 }
 
+/* Hace que el botón de la primera fila sea cuadrado */
+.fila .btn {
+    border-radius: 0;
+}
+
+/* Contenedor de la segunda fila (con dos botones) */
 .fila-doble {
     display: flex;
-    gap: 180px; /* Espacio entre los dos botones de abajo */
+    justify-content:center;
+    gap: 95px;               /* Separación entre los dos botones */
 }
 
-/* Estilo de los botones */
+/* Estilo general para todos los botones */
 .btn {
-    background-color: #5b1a12;
-    border: 1px solid #d69b7c;
-    padding: 25px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    color: white; /*color de la letra del boton de codigo de rastreo*/
+    background-color: #5b1a12; /* Color de fondo café oscuro */
+    border: 1px solid #d69b7c; /* Borde delgado color arena */
+    font-size: 2.2vw;
+    width: 20vw;
+    height: 8vw;
+    cursor: pointer;           /* Cambia el cursor a "mano" al pasar encima */
+    border-radius: 12px;       /* Esquinas redondeadas (por defecto) */
+    color: white;              /* Color del texto */
 }
 
-.largo { width: 400px; }
-.corto { width: 180px; }
-
+/* Estilo para el botón con diseño claro */
 .btn.especial {
-    background-color: #d69b7c; /* Fondo Beige */
-    color: #5b1a12;           /* Texto Marrón */
-    border: 2px solid#d5885f ; /* Borde para que se vea sobre el fondo beige */
+    background-color: #d69b7c; /* Fondo color arena */
+    color: #5b1a12;           /* Texto café oscuro */
+    border: 2px solid #d5885f; /* Borde un poco más grueso */
 }
-
     /* ... aquí termina el código de tus botones ... */
 
