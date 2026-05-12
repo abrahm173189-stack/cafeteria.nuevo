@@ -5,11 +5,11 @@ body {
     left: 0;           /* Alinea al inicio izquierdo */
     width: 100%;       /* Ocupa todo el ancho de la pantalla */
     height: 100%;      /* Ocupa todo el alto de la pantalla */
-    background-image: url('img/Fondo2.png'); /* Imagen de fondo */
+    background-image: url('Fondocafeteria.png..png'); /* Imagen de fondo */
     background-repeat: repeat-y;             /* Repite la imagen solo hacia abajo */
     background-size: 100% auto;              /* Ancho total, alto automático */
     background-position: top center;         /* Centra la imagen de fondo */
-    z-index: -1;       /* Envía el fondo detrás de todo el contenido */
+    z-index: 2;       /* Envía el fondo detrás de todo el contenido */
 }
 
 /* Clase para aplicar la fuente tipo pixel */
@@ -43,7 +43,7 @@ body {
 
 /* Estilo del título principal */
 .cuadro-marron h1{
-    font-size: 6vw;          /* Tamaño de letra basado en el ancho de pantalla */
+    font-size: 4.8vw;          /* Tamaño de letra basado en el ancho de pantalla */
     text-align: center;
 }
 
